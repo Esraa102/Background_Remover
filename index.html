@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Image <span>Background</span> Automatically & <span>Free</span></h1>
+        <!--Start Card-->
+        <div id="start-card">
+            <button id="upload">
+                <input type="file" id="upload-input">
+                Upload Image
+            </button>
+            <span>Upload Any Image To Make It Transparent</span>
+        </div>
+        <!--Choose Image-->
+        <div id="choose-card">
+            <img src="" alt="" class="play-image">
+            <button id="start">Start</button>
+        </div>
+        <!--Loading Page-->
+        <div id="loading-page">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--Remove Background-->
+        <div id="remove-bg">
+            <div class="image-container">
+                <img src="" alt="" class="removed">
+                <img src="" alt="" class="small">
+            </div>
+            <div class="btns">
+                <button id="upload-another">Upload Another</button>
+                <a id="download" download>Download</a>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

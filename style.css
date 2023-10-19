@@ -1,0 +1,221 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    transition:0.3s;
+}
+body {
+    background-color:#000;
+    color:#fff;
+}
+.container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:20px;
+    min-height:100vh;
+}
+.container h1 {
+    width:60%;
+text-align:center;
+line-height:1.8;
+}
+.container h1 span {
+    color:orangered;
+}
+@media(max-width:552px){
+    .container h1 {
+        width:90%;
+        font-size:20px;
+    }
+}
+#start-card ,
+#choose-card,
+#loading-page,
+#remove-bg{
+    width:50%;
+height:300px;
+padding: 0 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap:20px;
+border:2px dashed orangered;
+border-radius:10px;
+margin-bottom:30px;
+}
+#start-card button ,
+#start,
+#download,
+#upload-another{
+    padding:10px 25px;
+    cursor:pointer;
+    font-size:18px;
+    background-color:orangered;
+    border:none;
+    border-radius:10px;
+    border-bottom:4px solid rgba(0,0,0,0.5);
+    position:relative;
+}
+#start-card button:active ,
+#start:active,
+#download:active,
+#upload-another:active{
+border-bottom:none;
+top: 2px;
+}
+#remove-bg button#upload-another {
+    background-color:#006cff;
+    }
+#download {
+    text-decoration:none;
+    color:#000;
+}
+#start-card span {
+    font-size:14px;
+}
+#choose-card img ,
+#remove-bg img.removed{
+    width:250px;
+    height:150px;
+    object-fit:cover;
+}
+#upload-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+#loading-page {
+    flex-direction:row;
+    position:relative;
+    overflow:hidden;
+}
+#loading-page span{
+width:10px;
+height:10px;
+border-radius:50%;
+background-color:#eee;
+position:absolute;
+}
+#loading-page span:first-child {
+    left:-100%;
+    animation: one 3s ease-in-out infinite;
+}
+@keyframes one {
+    0% {
+        left:-100%;
+        opacity:0.5;
+    }
+    50%{
+        left:50%;
+        opacity:1;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+#loading-page span:nth-child(2) {
+    left:-100%;
+    animation: two 3s ease-in-out  0.3s infinite;
+}
+@keyframes two {
+    0% {
+        left:-100%;
+        opacity:0.5;
+    }
+    50%{
+        left:49%;
+        opacity:1;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+#loading-page span:nth-child(3) {
+    left:-100%;
+    animation: three 3s ease-in-out  0.6s infinite;
+}
+@keyframes three {
+    0% {
+        left:-100%;
+        opacity:0.5;
+    }
+    50%{
+        left:48%;
+        opacity:1;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+#loading-page span:last-child {
+    left:-100%;
+    animation: three 3s ease-in-out  0.9s infinite;
+}
+@keyframes three {
+    0% {
+        left:-100%;
+        opacity:0.5;
+    }
+    50%{
+        left:47%;
+        opacity:1;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+#remove-bg .image-container {
+    position:relative;
+    background-image:url('download.png');
+}
+#remove-bg img.small {
+    width:50px;
+    position:absolute;
+    border-radius:5px;
+    top:5px;
+    left:5px;
+}
+#remove-bg #download {
+    margin-top:10px;
+}
+
+
+@media(max-width:768px) {
+    #start-card ,
+#choose-card,
+#loading-page,
+#remove-bg{
+width:90%;
+}
+}
+@media(max-width:552px) {
+    #start-card ,
+#choose-card,
+#loading-page,
+#remove-bg{
+width:90%;
+}
+#choose-card img ,
+#remove-bg img.removed{
+    width:200px;
+}
+}
+#start-card ,
+#choose-card,
+#loading-page,
+#remove-bg{
+    display:none;
+}
